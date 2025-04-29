@@ -53,24 +53,7 @@ sequenceDiagram
 
 ```mermaid
 flowchart LR
-   A[BRANCH BANK]--> M(Middle Man)
-   M-->B[HQ Bank]
-```
-```mermaid
-flowchart LR
-    A[Branch Bank] -->|Sends Request| M((Middle Man))
-    M -->|Forwards| B[HQ Bank]
-```
-```mermaid
-flowchart LR
-    A[Branch Bank] --- B[HQ Bank]
-    M(Middle Man)
-    M -.-> A
-    M -.-> B
-```
-```mermaid
-flowchart LR
     A[Branch Bank] --> X(( )) --> B[HQ Bank]
-    M(Middle Man) --- X
+               M(Middle Man) --- X
 
 ```
