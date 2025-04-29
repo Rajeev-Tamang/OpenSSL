@@ -72,6 +72,17 @@ sequenceDiagram
     participant Attacker
     Attacker--xServer: Attempted interception blocked
 ```
+```mermaid
+sequenceDiagram
+    participant Client as Client/User
+    participant Attacker as Attacker (MitM)
+    participant Server as Server
+
+    Client->>Attacker: Encrypted message (Public Key)
+    Attacker--xServer: Attempted interception blocked
+    Attacker-->>Client: Can't decrypt (No Private Key)
+    Note over Client,Server: SSL/TLS prevents Man-in-the-Middle attack
+```
 
 - *Suppose the Branch A is sending transtion of $1000 to HQ bank , in some specific user account, if the middle man capture it then , what? We know that he can not read data, due to confidentiality (Encryption) , we know he cannot change it , even if he did it we will know i.e due to integrity (Hashing) but what if he capture and crate multiple copy then sended in that same wire? That specific user acoount wil be full of $$$.*
 - So, inorder to be protected from that there is anti-replay.
