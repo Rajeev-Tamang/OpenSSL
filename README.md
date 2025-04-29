@@ -26,10 +26,24 @@ https://drive.google.com/drive/folders/1f0gmJCV1OqZ5VMiL8VhXv-SMaGb9NV6T
 
 ## 2.How do SSL/TLS protect your data?
 - Data sent across a wire can be captured by anyone in the middle.
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant M as MITM
+    participant S as Server
+
+    C->>M: Connect request
+    M->>S: Forward request
+    S-->>M: Response
+    M-->>C: Tampered response
+```
 - puropse of SSL/TLS is to protect the data in three ways:
 
- i)**Confidentiality**: Data is only Accessible by client and server - *Encryption*
-ii)**Integrity**: Data is not modified between client and server. - *Hashing*
-iii)**Autherntication**: Client/server are indeed who they are. - *PKI*
+   - i)**Confidentiality**: Data is only Accessible by client and server - *Encryption*
+   - ii)**Integrity**: Data is not modified between client and server. - *Hashing*
+   - iii)**Autherntication**: Client/server are indeed who they are. - *PKI*
 
 ***NOTE: TUNNEL IS CONCEPTUAL ILLUSTRATION. DATA IS STILL PASSING THROUGH OTHER NETWORKS.***
+
+
