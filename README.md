@@ -74,14 +74,13 @@ sequenceDiagram
 ```
 ```mermaid
 sequenceDiagram
-    participant Client as Client/User
+    participant BranchBank as BranchBank
     participant Attacker as Attacker (MitM)
-    participant Server as Server
+    participant HQ_Bank as HQ_Bank
 
-    Client->>Attacker: Encrypted message (Public Key)
-    Attacker--xServer: Attempted interception blocked
-    Attacker-->>Client: Can't decrypt (No Private Key)
-    Note over Client,Server: SSL/TLS prevents Man-in-the-Middle attack
+    BranchBank->>Attacker: Transcation data
+    Attacker--xServer: Multiple Repeted Transction
+    Note over BranchBank,HQ_Bank: Bank Transtion Data
 ```
 
 - *Suppose the Branch A is sending transtion of $1000 to HQ bank , in some specific user account, if the middle man capture it then , what? We know that he can not read data, due to confidentiality (Encryption) , we know he cannot change it , even if he did it we will know i.e due to integrity (Hashing) but what if he capture and crate multiple copy then sended in that same wire? That specific user acoount wil be full of $$$.*
