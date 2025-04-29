@@ -61,3 +61,10 @@ flowchart LR
     A[Branch Bank] -->|Sends Request| M((Middle Man))
     M -->|Forwards| B[HQ Bank]
 ```
+```mermaid
+flowchart LR
+    A[Branch Bank] --- B[HQ Bank]
+    M(Middle Man)
+    M -.-> A
+    M -.-> B
+```
