@@ -33,7 +33,7 @@ sequenceDiagram
     participant M as MITM
     participant S as Server
 
-    C->S:
+    C->S:Request
     
 ```
 - puropse of SSL/TLS is to protect the data in three ways:
