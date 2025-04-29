@@ -52,6 +52,7 @@ sequenceDiagram
 ## 3. Anti-Replay and Non-Repudiation.
 
 ```mermaid
+flowchart LR
    A[BRANCH BANK]--> M(Middle Man)
    M-->B[HQ Bank]
 ```
