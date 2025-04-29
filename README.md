@@ -45,3 +45,8 @@ sequenceDiagram
 ***NOTE: TUNNEL IS CONCEPTUAL ILLUSTRATION. DATA IS STILL PASSING THROUGH OTHER NETWORKS.***
 
 
+***
+***
+***
+
+## 3. Anti-Replay and Non-Repudiation.
