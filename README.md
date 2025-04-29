@@ -33,10 +33,8 @@ sequenceDiagram
     participant M as MITM
     participant S as Server
 
-    C->>M: Connect request
-    M->>S: Forward request
-    S-->>M: Response
-    M-->>C: Tampered response
+    C->S:
+    
 ```
 - puropse of SSL/TLS is to protect the data in three ways:
 
