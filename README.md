@@ -50,7 +50,7 @@ sequenceDiagram
 ***
 
 ## 3. Anti-Replay and Non-Repudiation.
-
+### Anti-Replay
 ```mermaid
 flowchart LR
     A[Branch Bank] --> X(( )) --> B[HQ Bank]
@@ -60,3 +60,14 @@ flowchart LR
         M(Middle Man- With SSL/TLS there is confidiality, intergrity and authentication but the middle man can still capture the data and send it again) --> X
     end
 ```
+- *Suppose the Branch A is sending transtion of $1000 to HQ bank , in some specific user account, if the middle man capture it then , what? We know that he can not read data, due to confidentiality (Encryption) , we know he cannot change it , even if he did it we will know i.e due to integrity (Hashing) but what if he capture and crate multiple copy then sended in that same wire? That specific user acoount wil be full of $$$.*
+- So, inorder to be protected from that there is anti-replay.
+- Anti-Replay is provided with bulit-in sequqence number.
+- That sequence number is built into Intergrity+ Authentication Mechanism.
+
+### Non-Repudation:
+- Meaning od Repudation: to refuse to have anything to do with.
+- Suppose client sended some data and they are deining that they haven't sended it.
+- Sendor cannot later deny sending a message. Byproduct of intergrity+ Authentication
+
+
