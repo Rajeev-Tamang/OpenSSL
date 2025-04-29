@@ -52,30 +52,9 @@ sequenceDiagram
 ## 3. Anti-Replay and Non-Repudiation.
 ### Anti-Replay
 ```mermaid
-flowchart LR
-    A[Branch Bank] --> X(( )) --> B[HQ Bank]
-
-    subgraph tap [ ]
-        direction TB
-        M(Middle Man- With SSL/TLS there is confidiality, intergrity and authentication but the middle man can still capture the data and send it again) --> X
-    end
-```
-
-
-```mermaid
-sequenceDiagram
-    participant Client/User
-    participant Server
-    Client/User->>Server: Sends message encrypted with public key
-    Server-->>Client/User: Decrypts message using private key
-    Note over Client/User,Server: SSL/TLS prevents Man-in-the-Middle (MitM) attack
-    participant Attacker
-    Attacker--xServer: Attempted interception blocked
-```
-```mermaid
 sequenceDiagram
     participant BranchBank as BranchBank
-    participant Attacker as Attacker (MitM)
+    participant Attacker as Attacker (MitM-With SSL/TLS there is confidiality, intergrity and authentication but the middle man can still capture the data and send it again)
     participant HQ_Bank as HQ_Bank
 
     BranchBank->>Attacker: Transcation data
