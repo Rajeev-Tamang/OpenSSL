@@ -21,4 +21,12 @@ https://drive.google.com/drive/folders/1f0gmJCV1OqZ5VMiL8VhXv-SMaGb9NV6T
 ***NOTE: SSL and TLS are just remaned version***
 
 
+## 2.How do SSL/TLS protect your data?
+- Data sent across a wire can be captured by anyone in the middle.
+- puropse of SSL/TLS is to protect the data in three ways:
 
+ i)**Confidentiality**: Data is only Accessible by client and server - *Encryption*
+ii)**Integrity**: Data is not modified between client and server. - *Hashing*
+iii)**Autherntication**: Client/server are indeed who they are. - *PKI*
+
+***NOTE: TUNNEL IS CONCEPTUAL ILLUSTRATION. DATA IS STILL PASSING THROUGH OTHER NETWORKS.***
