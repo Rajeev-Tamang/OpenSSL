@@ -79,7 +79,7 @@ sequenceDiagram
     participant HQ_Bank as HQ_Bank
 
     BranchBank->>Attacker: Transcation data
-    Attacker--xServer: Multiple Repeted Transction
+    Attacker--xHQ_Bank: Multiple Repeted Transction
     Note over BranchBank,HQ_Bank: Bank Transtion Data
 ```
 
