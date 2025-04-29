@@ -15,8 +15,10 @@ https://drive.google.com/drive/folders/1f0gmJCV1OqZ5VMiL8VhXv-SMaGb9NV6T
 | SSL | TLS |
 |-----|-----|
 |Secure Sockets Layer|Transport layer security|
-|Created by NetScape in 1994| SSL maintenance handed to IETF in 1999.|
+|Created by NetScape in 1994| SSL maintenance handed to IETF in 1999. IETF renamed protocol to TLS|
 
+
+***NOTE: SSL and TLS are just remaned version***
 
 
 
