@@ -68,3 +68,9 @@ flowchart LR
     M -.-> A
     M -.-> B
 ```
+```mermaid
+flowchart LR
+    A[Branch Bank] --> X(( )) --> B[HQ Bank]
+    M(Middle Man) --- X
+
+```
