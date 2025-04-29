@@ -60,6 +60,19 @@ flowchart LR
         M(Middle Man- With SSL/TLS there is confidiality, intergrity and authentication but the middle man can still capture the data and send it again) --> X
     end
 ```
+
+
+```mermaid
+sequenceDiagram
+    participant Client/User
+    participant Server
+    Client/User->>Server: Sends message encrypted with public key
+    Server-->>Client/User: Decrypts message using private key
+    Note over Client/User,Server: SSL/TLS prevents Man-in-the-Middle (MitM) attack
+    participant Attacker
+    Attacker--xServer: Attempted interception blocked
+```
+
 - *Suppose the Branch A is sending transtion of $1000 to HQ bank , in some specific user account, if the middle man capture it then , what? We know that he can not read data, due to confidentiality (Encryption) , we know he cannot change it , even if he did it we will know i.e due to integrity (Hashing) but what if he capture and crate multiple copy then sended in that same wire? That specific user acoount wil be full of $$$.*
 - So, inorder to be protected from that there is anti-replay.
 - Anti-Replay is provided with bulit-in sequqence number.
