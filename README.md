@@ -57,3 +57,12 @@ flowchart LR
                M(Middle Man) --- X
 
 ```
+```mermaid
+flowchart LR
+    A[Branch Bank] --> X(( )) --> B[HQ Bank]
+
+    subgraph tap [ ]
+        direction TB
+        M(Middle Man) --> X
+    end
+```
