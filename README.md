@@ -54,15 +54,9 @@ sequenceDiagram
 ```mermaid
 flowchart LR
     A[Branch Bank] --> X(( )) --> B[HQ Bank]
-               M(Middle Man) --- X
-
-```
-```mermaid
-flowchart LR
-    A[Branch Bank] --> X(( )) --> B[HQ Bank]
 
     subgraph tap [ ]
         direction TB
-        M(Middle Man) --> X
+        M(Middle Man- With SSL/TLS there is confidiality, intergrity and authentication but the middle man can still capture the data and send it again) --> X
     end
 ```
