@@ -101,7 +101,8 @@ sequenceDiagram
    - Five Organizations secure 98% of the internet.
      ```mermaid
      graph LR
-     IdenTrust -->>DigiCert
-     DigiCert-->>Sectigo
+     IdenTrust -->DigiCert
+     DigiCert-->Sectigo
      Sectigo-->GoDaddy
+     GoDaddy-->GlobalSign
      ``` 
