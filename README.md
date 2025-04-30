@@ -83,20 +83,20 @@ sequenceDiagram
    - server
    - certificate authority (CA)
  
- - Client:
+ - **Client:**
    - Entity initiatinf the TLS Handshake.
    - when we say client, we dont mean to say users, rather web browser, phone, app, IOT, etc.
    - Optionally authenticated (rare)
 
 
-- Server:
+- **Server:**
   - Entity receiving the TLS handshake.
   - Web server:
     - Apache,IIS,NginX,etc...
     - Load Balancer or SSL accelerator.
  - Always authenticated [ meaning server have to prove that i am the valid one by giving certificate ]
 
-- Certificate Authority:
+- **Certificate Authority:**
    - Governing Entity that issues Certificates. [ Generates Certificate for Server ]
    - Trusted by client and server.
    - Provide Trust Anchor
