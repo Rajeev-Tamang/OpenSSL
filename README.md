@@ -72,4 +72,36 @@ sequenceDiagram
 - Suppose client sended some data and they are deining that they haven't sended it.
 - Sendor cannot later deny sending a message. Byproduct of intergrity+ Authentication
 
+## 4.Key Player of SSL.
 
+- SSL/TLS  ecosystem involves three key players:
+   - client
+   - server
+   - certificate authority (CA)
+ 
+ - Client:
+   - Entity initiatinf the TLS Handshake.
+   - when we say client, we dont mean to say users, rather web browser, phone, app, IOT, etc.
+   - Optionally authenticated (rare)
+
+
+- Server:
+ - Entity receiving the TLS handshake.
+ - Web server:
+   - Apache,IIS,NginX,etc...
+   - Load Balancer or SSL accelerator.
+ - Always authenticated [ meaning server have to prove that i am the valid one by giving certificate ]
+
+- Certificate Authority:
+   - Governing Entity that issues Certificates. [ Generates Certificate for Server ]
+   - Trusted by client and server.
+   - Provide Trust Anchor
+      - if we trust CA , we trust what the CA trusts [meaning all client do not trust server but if  
+        client trust the CA and CA trust the Server than , Client can trust CA]
+   - Five Organizations secure 98% of the internet.
+     ```mermaid
+     flowchart LR
+     IdenTrust -->>DigiCert
+     DigiCert-->>Sectigo
+     Sectigo-->GoDaddy
+     ``` 
