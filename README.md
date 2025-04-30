@@ -100,7 +100,7 @@ sequenceDiagram
         client trust the CA and CA trust the Server than , Client can trust CA]
    - Five Organizations secure 98% of the internet.
      ```mermaid
-     flowchart LR
+     graph LR
      IdenTrust -->>DigiCert
      DigiCert-->>Sectigo
      Sectigo-->GoDaddy
