@@ -106,6 +106,11 @@ sequenceDiagram
      ```mermaid
      graph LR
      IdenTrust["IdenTrust<br>51.9%"]
+     DigiCert["DigiCert<br>19.4%"]
+     Sectigo["Sectigo<br>17.5%"]
+     GoDaddy["GoDaddy<br>6.9%"]
+     GlobalSign["GlobalSign<br>2.9%"]
+
      IdenTrust---DigiCert
      DigiCert---Sectigo
      Sectigo---GoDaddy
