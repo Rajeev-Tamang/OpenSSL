@@ -72,6 +72,10 @@ sequenceDiagram
 - Suppose client sended some data and they are deining that they haven't sended it.
 - Sendor cannot later deny sending a message. Byproduct of intergrity+ Authentication
 
+***
+***
+***
+
 ## 4.Key Player of SSL.
 
 - SSL/TLS  ecosystem involves three key players:
@@ -101,8 +105,12 @@ sequenceDiagram
    - Five Organizations secure 98% of the internet.
      ```mermaid
      graph LR
-     IdenTrust -->DigiCert
-     DigiCert-->Sectigo
-     Sectigo-->GoDaddy
-     GoDaddy-->GlobalSign
+     IdenTrust["IdenTrust<br>51.9%"]
+     IdenTrust---DigiCert
+     DigiCert---Sectigo
+     Sectigo---GoDaddy
+     GoDaddy---GlobalSign
      ``` 
+***
+***
+***
