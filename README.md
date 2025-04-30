@@ -90,10 +90,10 @@ sequenceDiagram
 
 
 - Server:
- - Entity receiving the TLS handshake.
- - Web server:
-   - Apache,IIS,NginX,etc...
-   - Load Balancer or SSL accelerator.
+  - Entity receiving the TLS handshake.
+  - Web server:
+    - Apache,IIS,NginX,etc...
+    - Load Balancer or SSL accelerator.
  - Always authenticated [ meaning server have to prove that i am the valid one by giving certificate ]
 
 - Certificate Authority:
