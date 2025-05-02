@@ -128,5 +128,5 @@ sequenceDiagram
 
 ```mermaid
  graph LR
-hello-->|Hashing Algorithm|52
+hello-->|Hashing Algorithm <br> 8+5+12+12+15|52
 ```
