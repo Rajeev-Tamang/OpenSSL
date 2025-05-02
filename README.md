@@ -168,3 +168,17 @@ graph TB
           - SHA-382   384bits
           - SHA-512   512bits
       
+***
+***
+***
+## 6.Data Integrity.
+   - Hashing is used to provide Integrity.
+        - Sender Calculates Digest From the message.
+        - Sender sends Message and Digest.
+        - Receiver Calculates Digest From received Message.
+        - Receiver compares both digests.
+             - If digests are identical, the message was not modified in transit.
+```mermiad
+graph LR
+UserA((circle))-->|Message | Digest|UserB((circle))
+```
