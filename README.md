@@ -189,6 +189,6 @@ sequenceDiagram
     participant MIMT as Attacker
     participant UserB as UserB
 
-    BranchBank---Attacker: Message+Digest
-    Attacker---UserB: Modified Message + New Modified Digest
+    BranchBank->>Attacker: Message+Digest
+    Attacker->>UserB: Modified Message + New Modified Digest
 ```
