@@ -200,3 +200,10 @@ sequenceDiagram
      - Message was not modified in transit - **INTERGITY**
      - Sender has the identical Secret Key- **Authentication**
 
+### Message Authentication Code(MAC):
+   - Concept of Combining Message + Secret Key when Calculating Digest.
+   - Provides Intergrity & Authentication for Bulk Data Transfer.
+   - Message + secret key must be combined in the same way.
+   - ***INDUSTRY STANDARD OF HOW TO COMBINE THE KEY  AND MESSAGE IS HMAC. i.e HASHING [KEY+MESSAGE] 
+     IS DIFFERNET THAN HASHING [MESSAGE+KEY].***
+   - Hash Based Message Authention code (RFC 2104)
