@@ -182,3 +182,13 @@ graph TB
 graph LR
 UserA((UserA))-->|Message + Digest|UserB((UserB))
 ```
+- 
+```mermaid
+sequenceDiagram
+    participant UserA as UserA
+    participant MIMT as Attacker
+    participant UserB as UserB
+
+    BranchBank---Attacker: Message+Digest
+    Attacker---UserB: Modified Message + New Modified Digest
+```
