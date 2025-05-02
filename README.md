@@ -178,7 +178,7 @@ graph TB
         - Receiver Calculates Digest From received Message.
         - Receiver compares both digests.
              - If digests are identical, the message was not modified in transit.
-```mermiad
+```mermaid
 graph LR
 UserA((circle))-->|Message | Digest|UserB((circle))
 ```
