@@ -84,7 +84,7 @@ sequenceDiagram
    - certificate authority (CA)
  
  - **Client:**
-   - Entity initiatinf the TLS Handshake.
+   - Entity initiating the TLS Handshake.
    - when we say client, we dont mean to say users, rather web browser, phone, app, IOT, etc.
    - Optionally authenticated (rare)
 
@@ -119,3 +119,5 @@ sequenceDiagram
 ***
 ***
 ***
+
+## 5.
