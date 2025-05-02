@@ -132,3 +132,30 @@ hello-->|Hashing Algorithm <br> 8+5+12+12+15|52
 ```
 - Result of the Hashing Algorthim is called a Digest.
    - Also called: Checksum, Fingerprint , Hash, CRC , etc.
+
+- if orginal data is changed , resulting digest will be different.
+   - suppose someone changed the hello to cello , the resulting diest will be 47
+```mermaid
+graph LR
+cello-->|Hashing Algorithm<br>3+5+12+12+15|47
+```
+
+- **Real world Hashing Algorithms must satisfy four requirements:**
+     - Infeasible to produce a given digest.
+     - Impossible to extract orginal message.
+     - Slight Changes produce drasric differnces.
+     - Resulting digest is fied width(length)
+  ![Hashing](https://github.com/user-attachments/assets/78422bf7-9ff3-4272-9168-80b61d92aed2)
+
+### Collisons:
+   - Two messages result in identical digests.
+   - Connot be avoided.
+        - it is a byproduct of "fixed width digest"
+   - Imaginary Hashing algorithms:
+        - prac-hash-3 bit digest.
+             - "bit" is either 0 or 1
+             - 3 bits means eight possible digest [ 2^8]
+```mermaid
+graph TB
+000---001---010---011-100-101-110-111
+```
