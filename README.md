@@ -128,5 +128,5 @@ sequenceDiagram
 
 ```mermaid
  graph LR
-hello->>52
+hello-->52
 ```
