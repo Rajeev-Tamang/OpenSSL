@@ -157,5 +157,14 @@ cello-->|Hashing Algorithm<br>3+5+12+12+15|47
              - 3 bits means eight possible digest [ 2^8]
 ```mermaid
 graph TB
-000---001---010---011-100-101-110-111
+000---001---010---011---100---101---110---111
 ```
+- Common Hashing Algorithms:
+     - MD5         128bits
+     - SHA/SHA1    160bits
+     - SHA2 family:
+          - SHA-224   224bits
+          - SHA-256   256bits
+          - SHA-382   384bits
+          - SHA-512   512bits
+      
