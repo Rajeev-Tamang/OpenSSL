@@ -207,3 +207,12 @@ sequenceDiagram
    - ***INDUSTRY STANDARD OF HOW TO COMBINE THE KEY  AND MESSAGE IS HMAC. i.e HASHING [KEY+MESSAGE] 
      IS DIFFERNET THAN HASHING [MESSAGE+KEY].***
    - Hash Based Message Authention code (RFC 2104)
+
+### Hashing Algorithm:
+   - Input: Message.
+   - Output: Digest.
+   - Example: MD5,SHA1,etc
+### MAC-Message Authentication Code:
+   - Input: Message + Secret Key.
+   - Output: Digest
+   - Exampe: HMAC (Hash Based Message Authentication Code).
