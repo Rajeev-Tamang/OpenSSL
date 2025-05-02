@@ -180,5 +180,5 @@ graph TB
              - If digests are identical, the message was not modified in transit.
 ```mermaid
 graph LR
-UserA((circle))-->|Message + Digest|UserB((circle))
+((UserA))-->|Message + Digest|((UserB))
 ```
