@@ -120,4 +120,13 @@ sequenceDiagram
 ***
 ***
 
-## 5.
+## 5.Hashing
+
+- Algorithm which takes as input a message of arbitary length and produces as output a "Fingerprint" 
+  of  the original message.
+*Let's say we want to hash the word "Hello" which simply adds tha alphabetic numeric of letter*
+
+```mermaid
+ graph LR
+hello-->|hashing Algorithm [8+5+12+12+15]|52
+```
