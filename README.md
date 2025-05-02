@@ -182,10 +182,21 @@ graph TB
 graph LR
 UserA((UserA))-->|Message + Digest|UserB((UserB))
 ```
-- 
+- What if there is Middle Man , attacking and capturing.
 ```mermaid
 sequenceDiagram
     UserA->>Attacker: Message+Digest
     Attacker->>UserB: Modified Message + New Modified Digest
-   note over UserA,UserB: This is How Actual data should have travel |Message+Digest| <br>But Middle Man is Capturing the Message+Digest sended from userA , then attacker change the message+digest and send it to UserB.
+   note over UserA,UserB: This is How Actual data should have travel |Message+Digest| <br>But Middle Man is Capturing the Message+Digest sended from userA ,<br> then attacker change the message+digest and send it to UserB.
 ```
+- Interceptor can modify the message and re-calculate hash.
+- Receiver compares their Digest against modified Digest
+- Simply sending the Messages Digest is not sufficient.
+     - Something else must be done
+ 
+- Both parties establish a mutual Secret Key.
+- Sender combines Message+Secret Key to create Diges.
+- Receiver verifies by calculating hash of message + secret key.
+     - Message was not modified in transit - **INTERGITY**
+     - Sender has the identical Secret Key- **Authentication**
+
