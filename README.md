@@ -187,5 +187,5 @@ UserA((UserA))-->|Message + Digest|UserB((UserB))
 sequenceDiagram
     UserA->>Attacker: Message+Digest
     Attacker->>UserB: Modified Message + New Modified Digest
-   note over UserA,UserB: This is How Actual data should have travel |Message+Digest| But Middle Man is Capturing the Message+Digest sended from userA , then attacker change the message+digest and send it to UserB.
+   note over UserA,UserB: This is How Actual data should have travel |Message+Digest| <br>But Middle Man is Capturing the Message+Digest sended from userA , then attacker change the message+digest and send it to UserB.
 ```
