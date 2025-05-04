@@ -303,7 +303,7 @@ mjqqt---|Decryption<br>secret key = 21|hello
 ## 8. PUBLIC & PRIVATE KEYS:
    - Asymmetric key pair can be used for : Encryption.
    ```mermaid
-graph LR
-((PAM-publickey&privatekey))---((JIM-Publickey&privatekey))
+      graph LR
+      ((PAM-publickey&privatekey))---((JIM-Publickey&privatekey))
    ```
      - Jim wnats
