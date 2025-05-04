@@ -247,15 +247,56 @@ Hello<br>Plain text---|Encryption<br>Decryption|lohel<br>CipherText.
 
 - For understanding this , lets take lowercase alphabets [ a b c d e f g h i j k l m n o p q r s t u v w x y z]
 - **lets take the work hello and use the encryption using secret key 3 i.e move the alphabet by 3. similarly for decryptining moving backward the alphabet by 3]**
+
+### SYMMETRIC KEY
 ```mermaid
 graph LR
 hello---|Encryption<br>secretkey=3|khoor
 ```
 ```mermaid
 graph LR
-hello---|Dncryption<br>secret key = 3|khoor
+hello---|Decryption<br>secret key = 3|khoor
 ```
-  
-  
-   
-      
+ ### ASYMMETRIC KEY 
+```mermaid
+graph LR
+hello---|Encryption<br>secretkey=5|mjqqt
+```
+```mermaid
+graph LR
+mjqqt---|Decryption<br>secret key = 21|hello
+```
+- *In Asymmetric encryption, one key is used foe encrption and other is for decryption*
+   - Two different keys that are mathmatically related.
+   - What one key encrpts, only the other can decrypt.
+        - **One key will be made Public**
+        - **Other Key will be kept Private**
+- ***IF SOMEWANTS WANT TO SEND ME DATA, I SHOULD HAVE ALREADY SHARED MY PUBLIC KEY WHICH CAN BE ACCESS BY ANYONE , THE SENDER ENCRYPT THE DATA WITH MY PUBLIC KEY AND SEND IT TO ME, WHEN I RECEIVE THE DATA , ONLY MY PRIVITE KEY WILL BE ABLE TO DECRYPT IT***
+
+  ### Strength and Weakness:
+   #### Symmteric Encryption:
+     - Stregth: Faster-Lower CPU Cost.
+     - Strength: Ciper text is smae size as plain text.
+     - Weakness: Secret Key must be shared-Less Secure.
+     - Ideal for BULK DATA Transfer
+   #### ASymmteric Encryption:
+     - Weakness: Slower-requires much larger key sizes.
+     - Weakness: Ciper text expansion
+     - Strength: Private key is never shared-More Secure
+     - restricted to limited Data
+
+
+### SYMMETRIC Encryption Algorithms:
+   - DES - 56BIT KEY
+   - RC4 - 128 BIT KEY
+   - 3DES-168 BIT KEY
+   - AES -128,192 OR 256 BIT KEY
+   - CHACHA20-128 OR 256 BIT KEY
+     
+### ASYMMETRIC Encryption Algorithms:
+   - DSA
+   - RSA
+   - DIFFIE-HELLMAN
+   - ECDSA
+   - ECDH
+     
