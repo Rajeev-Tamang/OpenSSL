@@ -350,7 +350,15 @@ mjqqt---|Decryption<br>secret key = 21|hello
             -  Only Dipak could have created the Signatures. Authentication.
 - ***KEEP IN MIND MANY DIFFERENT ITEMS CAN BE SIGNED, NOT ONLY MESSAGES BUT ALSO CERTIFICATES, SOFTWARE, EMAIL,ETC***
 
-- 
+***
+***
+***
+## 9.HOW SSL/TLS USES CRYPTOGRPAHY?
+
+|*******|******|********|
+|-------|------|--------|
+|Hashing|FingerPrint<br>MAC-Msg Auth Code|Intergrity & Authentication|
+|Symmetric Encryption|Encryption|Confidentiality|
                    
              
   
