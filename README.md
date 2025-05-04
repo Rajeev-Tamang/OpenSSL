@@ -304,7 +304,7 @@ mjqqt---|Decryption<br>secret key = 21|hello
    - Asymmetric key pair can be used for : Encryption. (Confidentiality)
    ```mermaid
       graph LR
-      Dipak(((Dipak<br>publickey(key)<br>privatekey(locked))))---Rajeev(((Rajeev<br>Publickey<br>privatekey)))
+      Dipak(((Dipak<br>publickey🔑<br>privatekey🔒)))---Rajeev(((Rajeev<br>Publickey🔑<br>privatekey🔒)))
    ```
    - If Rajeev wants to send a secret message to Dipak.
    - Rajeev will use the Dipak's Public Key to Encrypt the message.
