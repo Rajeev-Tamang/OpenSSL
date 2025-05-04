@@ -216,3 +216,46 @@ sequenceDiagram
    - Input: Message + Secret Key.
    - Output: Digest
    - Exampe: HMAC (Hash Based Message Authentication Code).
+
+***
+***
+***
+
+## 7.Encryption:
+
+- Encryption is used to provide Confidentiality.
+   - Confidentiality: only intended recipent can interpret thedat.
+
+```mermaid
+graph LR
+Hello<br>Plain text-->|Encryption|<br>|Decryption|lohel<br>CipherText.
+```
+   - Plain Text: Data before encryption & after decryption.
+   - Cipher Text: Data while encrypted.
+- Simple Encryption: Transforms PlainText into Cipher text.
+     - Doesn't scale
+     - Hard to do securely
+     - Cannot simply use a standard algorithm.
+**In real world Key Based Encryption is used**
+- Key Based Encryption:
+     - Combines industry vetted algotithm with a Secret Key.
+          - Alogrithm is created by experts.
+          - Secret keys can be randomly generated.
+- There are two types of key based encryption:
+     - Symmetric Encryption: Encrypt and Decrypt using the same keys.
+     - Asymmetric Encryption: Encryprt & Decrypt using diferent key.
+
+- For understanding this , lets take lowercase alphabets [ a b c d e f g h i j k l m n o p q r s t u v w x y z]
+- **lets take the work hello and use the encryption using secret key 3 i.e move the alphabet by 3. similarly for decryptining moving backward the alphabet by 3]**
+```mermaid
+Graph LR
+hello-->|Encryption<br>secret key = 3|khoor
+```
+```mermaid
+Graph LR
+hello<--|Dncryption<br>secret key = 3|khoor
+```
+  
+  
+   
+      
