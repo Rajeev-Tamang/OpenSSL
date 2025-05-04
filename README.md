@@ -228,7 +228,7 @@ sequenceDiagram
 
 ```mermaid
 graph LR
-Hello<br>Plain text---|Encryption<br>Decryption|lohel<br>CipherText.
+Hello(Plaintext)---|Encryption<br>Decryption|lohel(CipherText.)
 ```
    - Plain Text: Data before encryption & after decryption.
    - Cipher Text: Data while encrypted.
