@@ -359,6 +359,7 @@ mjqqt---|Decryption<br>secret key = 21|hello
 |-------|------|--------|
 |Hashing|FingerPrint<br>MAC-Msg Auth Code|Intergrity & Authentication|
 |Symmetric Encryption|Encryption|Confidentiality|
+|Asymmetric Encryption|Key Exchange<br>Sigantures<br>Encryption|Establish Shared keys<br> Integrity & Authentication<br>Confidentiality|
                    
              
   
