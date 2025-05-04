@@ -301,9 +301,12 @@ mjqqt---|Decryption<br>secret key = 21|hello
    - ECDH
 
 ## 8. PUBLIC & PRIVATE KEYS:
-   - Asymmetric key pair can be used for : Encryption.
+   - Asymmetric key pair can be used for : Encryption. (Confidentiality)
    ```mermaid
       graph LR
-      PAM(((PAM<br>publickey<br>privatekey)))---JIM(((JIM<br>Publickey<br>privatekey)))
+      Dipak(((Dipak<br>publickey<br>privatekey)))---Rajeev(((Rajeev<br>Publickey<br>privatekey)))
    ```
-     - Jim wnats
+   - If Rajeev wants to send a secret message to Dipak.
+   - Rajeev will use the Dipak's Public Key to Encrypt the message.
+   - Then , onlt the private key of Dipak can decrypt the message ( Only the correlating Private Key can Decrypt).
+
