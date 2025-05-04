@@ -304,16 +304,16 @@ mjqqt---|Decryption<br>secret key = 21|hello
    - Asymmetric key pair can be used for : Encryption. (Confidentiality)
    ```mermaid
       graph LR
-      Dipak(((Dipak<br>publickey<br>privatekey)))---Rajeev(((Rajeev<br>Publickey<br>privatekey)))
+      Dipak(((Dipak<br>publickey(key)<br>privatekey(locked))))---Rajeev(((Rajeev<br>Publickey<br>privatekey)))
    ```
    - If Rajeev wants to send a secret message to Dipak.
    - Rajeev will use the Dipak's Public Key to Encrypt the message.
-   - Then , onlt the private key of Dipak can decrypt the message ( Only the correlating Private Key can Decrypt).
+   - Then , ont the private key of Dipak can decrypt the message ( Only the correlating Private Key can Decrypt).
 
  - ***With Asymmetric key , we can also achive authentication and integrity***
  - When Dipak does not care about confidentiality but wants to prove that its Dipak who sended the Data then.
  - Dipak will use his own private key to encrypt the message.
- - Anyone with Dipak public key can decrypt the message. When Dipak sends message to rajeev by encrypring with his own privtae key, rajeev will use dipak's public ko decrypt the message.
+ - Anyone with Dipak public key can decrypt the message. When Dipak sends message to rajeev by encrypting with his own privtae key, rajeev will use dipak's public ko decrypt the message.
  - If Rajeev is able to decrypt the message , it proves two things:
       - Rajeev know the message has been send by Dipak: **Authentication**
       - It also proves that message has not been modified in transit: Intergrity.
