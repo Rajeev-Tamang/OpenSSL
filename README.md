@@ -304,6 +304,6 @@ mjqqt---|Decryption<br>secret key = 21|hello
    - Asymmetric key pair can be used for : Encryption.
    ```mermaid
 graph LR
-((PAM<br>publickey<br>privatekey))---((JIM<br>publickey<br>privatekey))
+((PAM-publickey&privatekey))---((JIM-Publickey&privatekey))
    ```
      - Jim wnats
