@@ -228,7 +228,7 @@ sequenceDiagram
 
 ```mermaid
 graph LR
-Hello<br>Plain text-->|Encryption|<br>|Decryption|lohel<br>CipherText.
+Hello<br>Plain text-->|Encryption<br>Decryption|lohel<br>CipherText.
 ```
    - Plain Text: Data before encryption & after decryption.
    - Cipher Text: Data while encrypted.
@@ -249,7 +249,7 @@ Hello<br>Plain text-->|Encryption|<br>|Decryption|lohel<br>CipherText.
 - **lets take the work hello and use the encryption using secret key 3 i.e move the alphabet by 3. similarly for decryptining moving backward the alphabet by 3]**
 ```mermaid
 Graph LR
-hello-->|Encryption<br>secret key = 3|khoor
+hello-->|Encryption<br>secretkey=3|khoor
 ```
 ```mermaid
 Graph LR
