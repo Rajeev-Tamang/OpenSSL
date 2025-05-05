@@ -413,5 +413,25 @@ mjqqt---|Decryption<br>secret key = 21|hello
    - Select Private Key. (D)
         - Product of D and E, divided by T must result in a remainder of 1.
         -  Private Key D=41
-        -  
-  
+          
+#### Encryption & Decryption:
+   - Encryption:
+        - Message^E MOD N = Cipher Text.
+        - Cipher^D MOD N = Message.
+     - Lets say our message value is 60, then encrypt with public key , Decrypt with private key.
+          -(60^29) MOD 133 = 86 , cipher text - 86
+          - (86^41) MOD 133 = 60 , message.
+      
+
+#### HOW SECURE IS RSA?
+   - Security lies in difficulty of factoring semi-prime numbers.
+        - If given the number 133, could you extract 7 & 19?
+             - Really? ....Prove it, what are the factors of 1909?
+   - In 1991, RSA Laboratory created the RSA challenge:
+        - Released 54 semi-primes of various sizes and asked for Factors.
+            - Competition ended in 2007- only 12 factors were identified.
+            - As of 2020, another 11 were identified (no cash was awarded)
+                  - Biggest number factored: 829bits (feb2020)
+            - In 29 years, the 1024 bit number has never been factored.
+                 - 1024 bit RSA keys was recommended standard since 2002.
+                 - 2048 bit RSA keys is recommended standard since 2015  
