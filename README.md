@@ -434,4 +434,32 @@ mjqqt---|Decryption<br>secret key = 21|hello
                   - Biggest number factored: 829bits (feb2020)
             - In 29 years, the 1024 bit number has never been factored.
                  - 1024 bit RSA keys was recommended standard since 2002.
-                 - 2048 bit RSA keys is recommended standard since 2015  
+                 - 2048 bit RSA keys is recommended standard since 2015
+
+***
+***
+***
+                   
+## 12.Deffie-Hellman:
+   - Allows two parties to establish a shared secret over an unsercured medium.
+   - Shared secret is never transmitted , only values used to derive secret.
+
+ ### Steps:
+   - Both agree upon two numbers
+   - P(Prime number)=13
+   - G(Generator of P)=6
+   - Both will generate the random number , suppose jehis generate private key 5  and nabin generates private key 4.
+   -  Calculate Public Key: ( G^Private)MOD P = (6^5)MOD 13= 2
+   -  Calculate public key of nabin : (6^4)MOD 13 = 9
+   - Exchange the Public keys.
+   - Calculate the shared secret key ( shared public&private)MOD p
+   - jeshis shared sceret = 9^5MOD P = 3
+   - Nabin shared Sceret = 2^4MOD P = 3
+
+---
+---
+   - EStablish Shared Secret over an unsecured medium
+   - Shared secret is then used ti generated symmetric keys.
+   -  
+   |Jeshis|Nabin|
+   |------|-----|
