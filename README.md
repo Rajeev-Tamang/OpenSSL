@@ -398,3 +398,20 @@ mjqqt---|Decryption<br>secret key = 21|hello
 |Factors of 12: <br> 1 2 3 4 6 14| 2 3 5 7 11 <br> 13 29 37 61| factors of semi-prime 21:<br> 1 3 7 21|13MOD5=3|
 |Factors of 7:<br>1 7| NUmber divisible by only 1 and itself| Product of two primes is always sems-prime| 21MOD5=1<br>25MOD5=0)
   
+### RSA EXAMPLE:
+- Step 1: Genretaing keys.
+- Step 2: Using the ley for encryption & Decryption.
+ #### Genrating Keys:
+   - Select two prime numbers (P&Q). Suppose P=7 Q= 19 
+   - Calculate  product (P*Q) i.e 7*19=133 , lets says N=133
+   - Calculate Totient: (P-1)*(Q-1)=6*18=108 , lets says, T=108
+   - Select Public Key:
+        - MUST BE PRIME NUMBER
+        - MUST BE LESS THAN TOTIENT
+        - MUST NOT BE A FACTOR OF TOTIENT
+   - lets select the prime number :29 which is less than totient & is not a factor of totient. (PUBLIC key , E= 29)
+   - Select Private Key. (D)
+        - Product of D and E, divided by T must result in a remainder of 1.
+        -  Private Key D=41
+        -  
+  
