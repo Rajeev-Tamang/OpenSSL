@@ -363,12 +363,38 @@ mjqqt---|Decryption<br>secret key = 21|hello
 ***
 ***
 ***
-## 10.PUBLIC KEY INFRASTRUCTURE
+## 10.PUBLIC KEY INFRASTRUCTURE (PKI)
 
-```mermaid
-flowchart TD
-    A[/ Triangle /]
-```
+ - Three entities that form a PKI: Client,Server & CA.
+      - Client: Needs to connect securely or verify an indentity.
+      - Server: Needs to prove its identity.
+      - Certificate Authority: Validate identites & Generates Certificates.
+        
+- Most of us are Familiar with the PKI for WWW:
+     - Client are Web Browsers: Chrome,Firefox,IE,etc.
+     - Server are : Google.com,Youtube.com. reddit.com.twitter.com and any other HTTPS websites.
+     - Certificate Authority are: IdenTrust,Digicert,sectigo,GoDaddy,GlobalSign.
+- But other PKIs also exist:
+     - Code Signing: When we try to install any software in PC , the diaglog box will apper where we see Progarm name, Veriifed Publisher, File origin. Here code signing PKI involves its own set of Client, server and CA.
+          - Here , Client is Operating System, Software is server and there is Code signing CAs.
 
-      
+- There Could also be an internal Corporate PKI.
+   - Client: Employee work computers/Phones
+   - Server: Corportae Resources: Hr portal, ticketin system, etc.
+   - CA: Corporate internal CA
+***
+***
+***
+## 11.RSA-Rivest Shamir Adleman
+- Created in 1977 by, Ron Rivest, Adi Shamir , Leonard Adleman.
+- Most Common Asymmetric Encryption algorithm.
+- RSA creates a Pair of "Commutative" keys
+     - i.e  Encrypt with one, Decrypt with other.
+     - DH/DSA work differnetly
+
+|FACTOR|PRIME|SEMI=PRIME|MODULO|
+|------|-----|----------|------|
+|Numbers you can multiply to get orignal number|Number whose factors are only 1 and itself|Numbers whose factors are prime numbers| Remainder [Division}|
+|Factors of 12: <br> 1 2 3 4 6 14| 2 3 5 7 11 <br> 13 29 37 61| factors of semi-prime 21:<br> 1 3 7 21|13MOD5=3|
+|Factors of 7:<br>1 7| NUmber divisible by only 1 and itself| Product of two primes is always sems-prime| 21MOD5=1<br>25MOD5=0)
   
