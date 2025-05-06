@@ -486,10 +486,40 @@ mjqqt---|Decryption<br>secret key = 21|hello
 
   
 - DSA simply has two operations:
-     - Signature Generation:
-  input: 
+     ### Signature Generation:
+     - input: 
 ```mermaid
          graph LR
           MESSAGE-->PRIVATEKEY-->RANDOM#NUMBER-->DSA_PARAMETERS
  ```
    - OUTPUT: Signatures
+
+   ### Signature Verification:
+   - INPUT :
+     ```mermaid
+     graph LR
+     Message---PublicKey---Signatures---DsaParameters
+     ```
+     -OUTPUT: 1 or 0 (true or false)
+
+     -***Random number is very impoertant: it must be unique for each message or DSA fails catastrophically, If random number is erver re-used , prviate key can be extracted***
+
+***
+***
+***
+## 14.GENERATING ADN INSPECTING RSAs.
+ - Genrating RSA.
+      - *openssl genrsa -out RSAkey1.pem 1024*
+      - cat  RSAkey1.pem
+ - Genrating RSA with encryption:
+      - *openssl genrsa -out RSAkey2.pem -aes1256 2048*
+      - cat  RSAkey2.pem.
+
+ - View inside the RSAkey:
+      - Openssl rsa -in RSAkey1.pem -text
+![image](https://github.com/user-attachments/assets/3f76b4e9-4c19-482a-ac09-97ee02427f1b)
+
+      - Openssl rsa -in RSAkey2.pem -text
+![image](https://github.com/user-attachments/assets/6ab76fca-3e0f-477c-8d78-d6a675d92af0)
+
+-***OPENSSL LIST -CHIPHER-ALGORITHMS**, list supported symmetric encryption algorithms that can be used to secure private key files.
