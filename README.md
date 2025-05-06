@@ -489,5 +489,5 @@ mjqqt---|Decryption<br>secret key = 21|hello
      - Signature Generation:
        ```mermaid
          graph LR
-          INPUT-->MESSAGE-->PRIVATEKEY-->RANDOM#NUMBER-->DSAPARAMETERS
+          INPUT-->(MESSAGE)-->PRIVATEKEY-->RANDOM#NUMBER-->DSAPARAMETERS
        ```
