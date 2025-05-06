@@ -487,7 +487,8 @@ mjqqt---|Decryption<br>secret key = 21|hello
   
 - DSA simply has two operations:
      - Signature Generation:
-       ```mermaid
+  input: ```mermaid
          graph LR
-          INPUT-->[MESSAGE]-->PRIVATEKEY-->RANDOM#NUMBER-->DSAPARAMETERS
+          MESSAGE-->PRIVATEKEY-->RANDOM#NUMBER-->DSA_PARAMETERS
        ```
+   - OUTPUT: Signatures
