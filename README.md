@@ -523,3 +523,39 @@ mjqqt---|Decryption<br>secret key = 21|hello
 ![image](https://github.com/user-attachments/assets/6ab76fca-3e0f-477c-8d78-d6a675d92af0)
 
 -***OPENSSL LIST -CHIPHER-ALGORITHMS**, list supported symmetric encryption algorithms that can be used to secure private key files.
+
+
+
+***
+***
+***
+## 15.GENERATING ADN INSPECTING DSA KEYS.
+- Generating dsaparam file
+     - openssl dsaparam -out dsaparam.pem 1024
+     - cat dsaparam.pem
+     - openssl dsaparam -in dsaparam.pem -text
+     - 
+![image](https://github.com/user-attachments/assets/768ee710-201e-43d6-b449-7ce56982953c)
+-Generate DSA keys file with parameters file.
+   - openssl gendsa -out dsa.pem dsaparam.pem
+   - cat dsa.pem
+   - openssl dsa -in dsa.pem -text
+     ![image](https://github.com/user-attachments/assets/30623a25-c368-499c-a286-1a5e30f50a28)
+
+- Generate DSA parameters and Keys in one file.
+     - openssl dsaparam -genkey -out dsa-param-key.pem 2048 
+![image](https://github.com/user-attachments/assets/a76bfd21-25ec-4a40-9998-c8f30d35a37a)
+
+## 16.GENERATING ADN INSPECTING ELLIPTIC CURVE KEYS.
+- Generate EC Parameters File:
+     - openssl genpkey -genparam -algorithms EC -pkeyopt ec_paramgen_curve:secp384r1 -out EC-PARAM.pem
+     - openssl ecparam -in EC-PARAM.pem -text -noout
+- Generating EC keys from parameters file.
+     - openssl genpkey -paramfile EC-PARAM.pem -out EC-KEY.pem
+     - openssl ec -in EC-KEY.pem -text -noout
+- Generate EC keys directly.
+   - openssl genpkey -algorithms EC -pkeyopt ec_paramgen_curve:p-384 -out EC-KEY.pem
+   - openssl ec -in EC-KEY.pem -text -noout
+
+  -***openssl ecparam -list_curves***
+  
