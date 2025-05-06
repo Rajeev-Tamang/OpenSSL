@@ -458,8 +458,36 @@ mjqqt---|Decryption<br>secret key = 21|hello
 
 ---
 ---
-   - EStablish Shared Secret over an unsecured medium
-   - Shared secret is then used ti generated symmetric keys.
-   -  
-   |Jeshis|Nabin|
-   |------|-----|
+   - Establish Shared Secret over an unsecured medium
+   - Shared secret is then used to generated symmetric keys.
+***
+***
+***
+## 13.DIGITAL SIGNATURE ALGORITHM:
+- DSA is an asymmetric encryption algorithm.
+     - Different than other algorithms we've disscused.
+- RAS creates a pair of commutative keys. [RSA can be used for encryption, signatures and key exchange]
+- Deffie-hellman. [Deffie hellman can only be used for key exchange]
+- DSA simply created and validates signatures. No Encryption, No key exchange.
+
+  |RSA|
+  |---|
+  |Encryption|
+  |Signatures|
+  |Key Exchange|
+
+  |Deffie-Hellman|
+  |--------------|
+  |Key Exchange|
+
+  |DSA|
+  |---|
+  |Signatures|
+
+  
+- DSA simply has two operations:
+     - Signature Generation:
+       ```mermaid
+         graph LR
+          INPUT: (MESSAGE),[PRIVATEKEY],(RANDOM#NUMBER), [DSA PARAMETERS]
+       ```
