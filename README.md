@@ -579,7 +579,7 @@ mjqqt---|Decryption<br>secret key = 21|hello
 ***
 ***
 ***
-## OPENSSL PKEY UTILITY:
+## 18. OPENSSL PKEY UTILITY:
    - └─$ openssl pkey -in RSA-KEY1-DEC.pem -noout -text
          
 
@@ -588,4 +588,18 @@ mjqqt---|Decryption<br>secret key = 21|hello
    - ![image](https://github.com/user-attachments/assets/ad44ffd8-9d38-42e6-b5c1-708e00bd0191)
 
    - *the pkey utility can do be used to inspect any .pem into text file*
-   - *
+   - *The pkey utility cannot do everything the algorithm-specific inspection utilities can do.
+     ![image](https://github.com/user-attachments/assets/31b907c1-03de-420f-b769-6ed9c5c31d18)
+   - IN RSA, the public key consits of two values: The modulus and a public exponent.
+### Extracting only public key as text from any key file.
+   - └─$ openssl pkey -in RSA-KEY1.pem -noout -text_pub
+
+   - ![image](https://github.com/user-attachments/assets/d8e97efa-4b45-46d7-b612-ea8dfbda89ee)
+
+### Extracting only Public key in PEM format.
+   - └─$ openssl pkey -in RSA-KEY1.pem -pubout             
+   - ![image](https://github.com/user-attachments/assets/0b1d08d9-1b05-4d6b-8f46-43d0a9337252)
+---
+---
+---
+## 19. OPENSSL PKEY UTILITY:
