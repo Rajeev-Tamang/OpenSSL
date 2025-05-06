@@ -545,7 +545,9 @@ mjqqt---|Decryption<br>secret key = 21|hello
 - Generate DSA parameters and Keys in one file.
      - openssl dsaparam -genkey -out dsa-param-key.pem 2048 
 ![image](https://github.com/user-attachments/assets/a76bfd21-25ec-4a40-9998-c8f30d35a37a)
-
+***
+***
+***
 ## 16.GENERATING ADN INSPECTING ELLIPTIC CURVE KEYS.
 - Generate EC Parameters File:
      - openssl genpkey -genparam -algorithms EC -pkeyopt ec_paramgen_curve:secp384r1 -out EC-PARAM.pem
@@ -559,3 +561,31 @@ mjqqt---|Decryption<br>secret key = 21|hello
 
   -***openssl ecparam -list_curves***
   
+***
+***
+***
+## 17. Adding & Removing Encryption to RSA KEYS.
+- openssl rsa -in RSA-KEY1.pem -aes256 -out RSA-KEY1-ENC.pem 
+![image](https://github.com/user-attachments/assets/48b4fb9b-46be-4051-b707-ba82a2b5306a)
+![image](https://github.com/user-attachments/assets/2335f94a-8b47-4476-9fe7-0bd3dfe29828)
+
+- Remove Encryption from an RSA key file.
+     - └─$ openssl rsa -in RSA-KEY1-ENC.pem -out RSA-KEY1-DEC.pem
+     - ![image](https://github.com/user-attachments/assets/48addb83-983c-4a31-a96f-92532ce20c8e)
+![image](https://github.com/user-attachments/assets/35ed7746-6355-48a4-ae9f-8741a57f2db7)
+
+-***hash value of both RSA-KEY1-DEC.PEM AND RSA-KEY1.PEM***
+
+***
+***
+***
+## OPENSSL PKEY UTILITY:
+   - └─$ openssl pkey -in RSA-KEY1-DEC.pem -noout -text
+         
+
+   ![image](https://github.com/user-attachments/assets/f83a3dd1-9973-4594-b05a-23b2dd88d89c)
+   - └─$ openssl pkey -in dsa.pem -noout -text
+   - ![image](https://github.com/user-attachments/assets/ad44ffd8-9d38-42e6-b5c1-708e00bd0191)
+
+   - *the pkey utility can do be used to inspect any .pem into text file*
+   - *
