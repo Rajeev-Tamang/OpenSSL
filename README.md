@@ -602,4 +602,32 @@ mjqqt---|Decryption<br>secret key = 21|hello
 ---
 ---
 ---
-## 19. OPENSSL PKEY UTILITY:
+## 19.MATCHING PRIVATE KEYS TO CERTIFICATES & CSRs.
+   ### viewing x509 certificate as human readable text.
+   - └─$ openssl x509 -in RSA-KEY1.pem -noout -text
+   ### Viewing Certificate Signing request (CSR) contents as text.
+   - └─$  openssl req -in RSA-KEY1.pem -noout -text 
+---
+---
+---
+## 20.Generating a CSRs(Certificate signing request-used to request a signed certificated from a certificate authority) & Certificatr using an ***existing Privtae*** key.
+- x509 Certificate ( **Certificates like a public & Private key to identify- ex: a website or individual or orgazation, etc**)
+
+- Generating the CSR : └─$ openssl req -new -key RSA-KEY1.pem -out RSA-KEY1-CSR.pem 
+- Inspecting the CSR: └─$ openssl req -in  RSA-KEY1-CSR.pem  -noout -text
+
+- Generating Self-Signed Certificates: └─$  openssl req  x509 -key RSA-KEY1.pem -out RSA-CERT.pem 
+- └─$ openssl version -d                                      
+      - OPENSSLDIR: "/usr/lib/ssl"
+
+---
+---
+---
+## 21.Generating a CSRs(Certificate signing request-used to request a signed certificated from a certificate authority) & Certificatr using an ***NEW*** Privtae key.
+ - └─$ openssl req -new -out CSR.pem -subj "/CN=CommanName"
+      - 10:27 privkey.pem
+      - 10:27 CSR.pem
+ - ![image](https://github.com/user-attachments/assets/cf716d13-d3c3-4e76-87d6-3538e5ce5691)
+    
+ - └─$ openssl pkey -in privkey.pem -noout -text
+ - 
