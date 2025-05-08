@@ -630,4 +630,27 @@ mjqqt---|Decryption<br>secret key = 21|hello
  - ![image](https://github.com/user-attachments/assets/cf716d13-d3c3-4e76-87d6-3538e5ce5691)
     
  - └─$ openssl pkey -in privkey.pem -noout -text
- - 
+
+---
+---
+---
+## 22. Extracting Specific Information from Certificates & CSRs.
+- Viewing x509 certificate as human readable text
+     - openssl x509 -in cert.pem -noout -text
+     - openssl x509 -in cert.pem -noout -text -dates
+     - openssl x509 -in cert.pem -noout -text -issuer -subject
+
+   
+- Viewing Certificate signing request(CSR) content as text.
+     - openssl req -in CSR.pem -noout -text
+---
+---
+---
+## 23. Check if file is PEM,DER or PFX:
+   - └─$ openssl x509 -in cert_export_CLIENT.p12
+     
+---
+---
+---
+## 24. Converting files between PEM & DER Formats.
+   - └─$ openssl x509 -in cert_export_CLIENT.p12
